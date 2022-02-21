@@ -19,7 +19,7 @@
         <input type="password" name="password" placeholder="type password">
         <label for="">Password confirmation</label>
         <input type="password" name="password_confirm" placeholder="confirm your password">
-        <button>Registration</button>
+        <button type="submit">Registration</button>
         <p><a href="index.php">Back to Login</a></p>
         <?php
             if ($_SESSION['message']) {
