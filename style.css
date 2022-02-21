@@ -1,0 +1,44 @@
+*{
+    margin: 0%;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a{
+    color: rgb(174, 0, 255);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+p{
+    margin: 10px 0;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+input{
+    margin: 10px 0;
+    padding: 10px;
+    border: unset;
+    border-bottom: 2px solid rgb(177, 138, 250);
+    outline: none;
+}
+
+button{
+    padding: 10px;
+    background: rgb(177, 138, 250);
+    border: unset;
+    cursor: pointer;
+}
