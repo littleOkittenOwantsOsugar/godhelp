@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,15 +12,19 @@
 </head>
 <body>
     <!--Form of registration-->
-    <form action="" method="">
+    <form action="includes/regist.php" method="post">
         <label for="">Login</label>
-        <input type="text" placeholder="type login">
+        <input type="text" name="login" placeholder="type login">
         <label for="">Password</label>
-        <input type="password" placeholder="type password">
+        <input type="password" name="password" placeholder="type password">
         <label for="">Password confirmation</label>
-        <input type="password" placeholder="confirm your password">
+        <input type="password" name="password_confirm" placeholder="confirm your password">
         <button>Registration</button>
-        <p><a href="index.html">Back to Login</a></p>
+        <p><a href="index.php">Back to Login</a></p>
+
+        <p class="msg">
+            <?= $_SESSION['message'] ?>
+        </p>
     </form>
 </body>
 </html>

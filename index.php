@@ -15,7 +15,7 @@
         <label for="">Password</label>
         <input type="password" placeholder="type password">
         <button>Login</button>
-        <p><a href="registration.html">Registration</a></p>
+        <p><a href="registration.php">Registration</a></p>
     </form>
 </body>
 </html>
