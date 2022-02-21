@@ -10,7 +10,7 @@
         
         $pass=md5($pass);
 
-        mysqli_query($connect, "INSERT INTO `users` (`id`, `login`, `password`) VALUES (NULL, '$pass', '$pass_con')");
+        mysqli_query($connect, "INSERT INTO `users` (`id`, `login`, `password`) VALUES (NULL, '$login', '$pass')");
         
         $_SESSION['message'] = 'Registration completed';
         header('Location: ../index.php');
