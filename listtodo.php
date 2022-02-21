@@ -1,5 +1,10 @@
+<?php error_reporting (E_ALL ^ E_NOTICE); ?>
+
 <?php
     session_start();
+    if (!$_SESSION['user']){
+        header('Location: index.php');
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,8 +17,10 @@
 </head>
 <body>
     <!--To do list-->
-    <form>
-        
-    </form>
+    <div class='list'>
+    <h2>Login:</h2>
+    <h2><?= $_SESSION['user']['login']?></h2>
+    <a href="includes/logout.php" class="logout">Log out and return to start page</a>
+    </div>
 </body>
 </html>

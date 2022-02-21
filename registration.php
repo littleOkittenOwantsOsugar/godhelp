@@ -1,5 +1,10 @@
+<?php error_reporting (E_ALL ^ E_NOTICE); ?>
+
 <?php
     session_start();
+    if ($_SESSION['user']){
+        header('Location: listtodo.php');
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">

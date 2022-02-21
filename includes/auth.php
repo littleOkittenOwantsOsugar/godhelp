@@ -16,7 +16,7 @@
             "login" => $user['login']
         ];
 
-        
+        header('Location: ../listtodo.php');
 
     } else{
         $_SESSION['message'] = 'Wrong login or password';
