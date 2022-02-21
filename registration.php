@@ -21,10 +21,13 @@
         <input type="password" name="password_confirm" placeholder="confirm your password">
         <button>Registration</button>
         <p><a href="index.php">Back to Login</a></p>
-
-        <p class="msg">
-            <?= $_SESSION['message'] ?>
-        </p>
+        <?php
+            if ($_SESSION['message']) {
+                echo '<p class="msg">' .  $_SESSION['message']  . '</p>';
+            }
+            unset($_SESSION['message']);
+        ?>
+        
     </form>
 </body>
 </html>
