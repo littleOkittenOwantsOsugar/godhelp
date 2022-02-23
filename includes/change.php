@@ -1,6 +1,5 @@
-<?php
-    session_start();
-    $con=mysqli_connect('localhost', 'root', '', 'registration');
-    if(!mysqli_connect('localhost','root')){
-		echo "Проблемы с подключением";
-	}
+
+    <form action="change copy.php"  method="post">
+    Type new note: <input type='text' name='mes'>
+    <button type="submit" class="butinsert">Change</button>
+    </form>

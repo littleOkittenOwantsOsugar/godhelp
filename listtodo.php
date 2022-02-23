@@ -31,7 +31,6 @@ $con=mysqli_connect('localhost', 'root', '', 'registration');
   echo "<table border='1'>
    <tr>
     <th>Notes</th>
-    <th></th>
    </tr>";
 $result_select=mysqli_query($con, "SELECT * FROM `registration`.`listtodo`");
   while($row = mysqli_fetch_array($result_select)){
@@ -39,7 +38,7 @@ $result_select=mysqli_query($con, "SELECT * FROM `registration`.`listtodo`");
     $name=$row['iduser'];
     $text=$row['message'];
     if($name==$_SESSION['user']['id']){
-        echo "<tr><td>$text</td><td><a href= 'includes/delete.php?id=".$row[0]."'>delete</a></td></tr>";
+        echo "<tr><td>$text</td><td><a href= 'includes/delete.php?id=".$row[0]."'>delete</a></td><td><a href= 'includes/change.php?id=".$row[1]."'>change</a></td></tr>";
         }
     }
   echo "</table>";
