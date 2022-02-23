@@ -21,19 +21,7 @@
     <h2>Login:</h2>
     <h2><?= $_SESSION['user']['login']?></h2>
     <?php
-
-    $s = "select * from products";
-    $res = mysqli_query($connect, $s);
-
-
-    while ($row = mysqli_fetch_array($res))
-    {
-        print ("<tr>");
-       print ("<td>".$row[0]."</td>");
-       print ("<td>".$row[1]."</td>");
-       print ("<td>".$row[2]."</td>");
-       print ("</tr>");
-    }
+    
     ?>
 
     <form action="includes/insert.php" method="post">
