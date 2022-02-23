@@ -22,6 +22,6 @@
 
     mysqli_query($con, $s);
 
-    //header('Location: ../listtodo.php');
+    header('Location: ../listtodo.php');
 
 ?>
