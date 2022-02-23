@@ -8,11 +8,11 @@
 
     //НЕ ОПРЕДЕЛЯЕТ id
 
-    $id=$_REQUEST['id'];
+    $idq=$_REQUEST['id'];
     $name=$_SESSION['user']['id'];
     $text=$_POST["mes"]; 
 
-    $s = "REPLACE INTO `listtodo` SET `id` = '".$id."', `iduser` = '".$name."', `message` = '".$text."'";
+    $s = "REPLACE INTO `listtodo` SET `id` = '".$idq."', `iduser` = '".$name."', `message` = '".$text."'";
 
     $_SESSION['message'] = $s;
 
