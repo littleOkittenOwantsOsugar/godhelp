@@ -6,15 +6,15 @@
 		echo "Проблемы с подключением";
 	}
 
-    //НЕ ОПРЕДЕЛЯЕТ iduser
-    
-    $idish = $_REQUEST['id'];
-    $namish = $_REQUEST['iduser'];
-    $price = $_POST["mes"];
+    //НЕ ОПРЕДЕЛЯЕТ id
 
-    $s = "REPLACE INTO `listtodo` SET `id` = '".$idish."', `iduser` = '".$namish."', `message` = '".$price."'";
+    $id=$_REQUEST['id'];
+    $name=$_SESSION['user']['id'];
+    $text=$_POST["mes"]; 
 
-    $_SESSION['message'] =$s;
+    $s = "REPLACE INTO `listtodo` SET `id` = '".$id."', `iduser` = '".$name."', `message` = '".$text."'";
+
+    $_SESSION['message'] = $s;
 
     mysqli_query($con, $s);
 
