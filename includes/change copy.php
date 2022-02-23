@@ -8,17 +8,14 @@
 
     //НЕ ОПРЕДЕЛЯЕТ id
 
-    $result_select=mysqli_query($con, "SELECT * FROM `registration`.`listtodo`");
-    $row = mysqli_fetch_array($result_select);
-    $id=$row['id'];
-
-    //$idq = $_REQUEST['id'];
+    //$id = $_REQUEST['id'];
+    $id = $_GET[ "id" ];
     $name=$_SESSION['user']['id'];
     $text=$_POST["mes"]; 
 
     $s = "REPLACE INTO `listtodo` SET `id` = '".$id."', `iduser` = '".$name."', `message` = '".$text."'";
 
-    $_SESSION['message'] = $s;
+    $_SESSION['message'] = $id;
 
     mysqli_query($con, $s);
 
