@@ -22,6 +22,28 @@
     <h2><?= $_SESSION['user']['login']?></h2>
     <?php
     // вывести список из бд КАК?
+    
+$con=mysqli_connect('localhost', 'root', '', 'registration');
+  if(!mysqli_connect('localhost','root')){
+		echo "Проблемы с подключением";
+	}
+  
+  echo "<table border='1'>
+   <caption>Notes</caption>
+   <tr>
+    <th>id</th>
+    <th>User</th>
+    <th>Mnenie</th>
+   </tr>";
+$result_select=mysqli_query($con, "SELECT * FROM `registration`.`listtodo`");
+  while($row = mysqli_fetch_array($result_select)){
+    $id=$row['id'];
+    $name=$row['iduser'];
+    $text=$row['message'];
+ 
+    echo "<tr><td>$id</td><td>$name</td><td>$text</td></tr>";
+    }
+  echo "</table>";
     ?>
 
     <form action="includes/insert.php" method="post">
