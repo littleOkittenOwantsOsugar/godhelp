@@ -8,7 +8,7 @@
 
     //НЕ ОПРЕДЕЛЯЕТ id
 
-    result_select=mysqli_query($con, "SELECT * FROM `registration`.`listtodo`");
+    $result_select=mysqli_query($con, "SELECT * FROM `registration`.`listtodo`");
     $row = mysqli_fetch_array($result_select);
     $id=$row['id'];
 
