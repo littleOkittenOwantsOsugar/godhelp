@@ -9,13 +9,13 @@
     //НЕ ОПРЕДЕЛЯЕТ id
 
     //$id = $_REQUEST['id'];
-    $id = $_GET[ "id" ];
+    $id = $_POST[ "idi" ];
     $name=$_SESSION['user']['id'];
     $text=$_POST["mes"]; 
 
     $s = "REPLACE INTO `listtodo` SET `id` = '".$id."', `iduser` = '".$name."', `message` = '".$text."'";
 
-    $_SESSION['message'] = $id;
+    $_SESSION['message'] = 'SUCCESFULL';
 
     mysqli_query($con, $s);
 
