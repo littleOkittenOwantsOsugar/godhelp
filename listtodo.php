@@ -21,7 +21,7 @@
     <h2>Login:</h2>
     <h2><?= $_SESSION['user']['login']?></h2>
     <?php
-    
+    // вывести список из бд КАК?
     ?>
 
     <form action="includes/insert.php" method="post">
