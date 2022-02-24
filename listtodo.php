@@ -23,25 +23,22 @@
     <?php
     // подключаем базу данных для заметок
     
-$con=mysqli_connect('localhost', 'root', '', 'registration');
-  if(!mysqli_connect('localhost','root')){
-		echo "Проблемы с подключением";
-	}
-  
-  echo "<table border='1'>
-   <tr>
-    <th>Notes</th>
-   </tr>";
-$result_select=mysqli_query($con, "SELECT * FROM `registration`.`listtodo`");
-  while($row = mysqli_fetch_array($result_select)){
-    $id=$row['id'];
-    $name=$row['iduser'];
-    $text=$row['message'];
-    if($name==$_SESSION['user']['id']){
-        echo "<tr><td>$text</td><td><a href= 'includes/delete.php?id=".$row[0]."'>delete</a></td><td><a href= 'includes/change.php?id=".$row[0]."'>change</a></td></tr>";
+    require_once 'includes/connect.php';
+    
+    echo "<table border='1'>
+    <tr>
+        <th>Notes</th>
+    </tr>";
+    $result_select=mysqli_query($connect, "SELECT * FROM `registration`.`listtodo`");
+    while($row = mysqli_fetch_array($result_select)){
+        $id=$row['id'];
+        $name=$row['iduser'];
+        $text=$row['message'];
+        if($name==$_SESSION['user']['id']){
+            echo "<tr><td>$text</td><td><a href= 'includes/delete.php?id=".$row[0]."'>delete</a></td><td><a href= 'includes/change.php?id=".$row[0]."'>change</a></td></tr>";
+            }
         }
-    }
-  echo "</table>";
+    echo "</table>";
 
     ?>
 

@@ -1,15 +1,9 @@
 <?php
     session_start();
     
-    $con=mysqli_connect('localhost', 'root', '', 'registration');
-    if(!mysqli_connect('localhost','root')){
-		echo "Проблемы с подключением";
-	}
-
-    //НЕ ОПРЕДЕЛЯЕТ id
+    require_once 'connect.php';
 
     $id = $_POST['idi'];
-    //$id = $_POST[ "idi" ];
     $name=$_SESSION['user']['id'];
     $text=$_POST["mes"]; 
 
@@ -17,7 +11,7 @@
 
     $_SESSION['message'] = 'SUCCESFULL';
 
-    mysqli_query($con, $s);
+    mysqli_query($connect, $s);
 
     header('Location: ../listtodo.php');
 
