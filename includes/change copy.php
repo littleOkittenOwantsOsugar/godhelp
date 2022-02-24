@@ -8,8 +8,8 @@
 
     //НЕ ОПРЕДЕЛЯЕТ id
 
-    //$id = $_REQUEST['id'];
-    $id = $_POST[ "idi" ];
+    $id = $_POST['idi'];
+    //$id = $_POST[ "idi" ];
     $name=$_SESSION['user']['id'];
     $text=$_POST["mes"]; 
 
